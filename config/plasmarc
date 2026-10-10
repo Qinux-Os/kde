@@ -1,0 +1,113 @@
+[Theme]
+# Qinux ships Breeze rather than a custom Qt style. A custom style has to track
+# every Qt widget across every application; Breeze already does that work, and
+# Qinux differentiates through colour and the panel instead.
+name=breeze-dark
+
+[Theme-Qt]
+name=Breeze
+useGlobalSettings=false
+
+[Theme-plasma]
+name=breeze-dark
+useGlobalSettings=false
+
+[Theme-kwin]
+name=breeze-dark
+useGlobalSettings=false
+
+[Theme-gtk2]
+name=Breeze
+useGlobalSettings=false
+
+[Theme-gtk3]
+name=Breeze
+useGlobalSettings=false
+
+[Theme-gtk4]
+name=adwaita
+useGlobalSettings=false
+
+[Theme-amarok]
+name=Breeze
+useGlobalSettings=false
+
+[Theme-ksplash]
+name=Breeze
+useGlobalSettings=false
+
+[Theme-plasma-desktop]
+name=breeze-dark
+useGlobalSettings=false
+
+[Theme-breeze]
+name=dark
+useGlobalSettings=false
+
+[Theme-breezedark]
+name=dark
+useGlobalSettings=false
+
+[Theme-breezelight]
+name=light
+useGlobalSettings=false
+
+[Theme-qgnome]
+name=dark
+useGlobalSettings=false
+
+[PlasmaViews][Panel 1][Defaults]
+# --- Qinux ---------------------------------------------------------------
+# Bottom, centred, always visible. A floating panel is the most recognisable
+# choice and the one users recognise between machines.
+panelPosition=Bottom
+panelAlignment=Center
+panelSize=Small
+panelBackground=default
+panelOpacity=255
+panelMargin=0
+iconSize=24
+autoHide=false
+alignment=Center
+length=100
+lengthUnit=Percent
+thickness=40
+thicknessUnit=Pixels
+marginUnit=Pixels
+height=40
+
+[Wallpaper]
+Plugin=org.kde.image
+
+[Animation]
+# Disabled. See kwinrc: this is the project aesthetic, not an oversight.
+DurationFactor=0.0
+enabled=false
+
+[Scripting]
+# No KRunner plugins are enabled by default. Qinux enables its own through the
+# qinux-settings package rather than shipping a runner here, so that removing
+# that package removes the feature cleanly.
+Plugins=
+
+[Icons]
+Theme=breeze
+
+[Cursors]
+Theme=breeze_cursors
+Size=24
+
+[Fonts]
+Name=Noto Sans
+Default=Noto Sans,10,-1,5,50,0,0,0,0,0,0
+Fixed=Noto Sans Mono,10,-1,5,50,0,0,0,0,0,0
+Menu=Noto Sans,10,-1,5,50,0,0,0,0,0,0
+Taskbar=Noto Sans,10,-1,5,50,0,0,0,0,0,0
+WindowTitle=Noto Sans,10,-1,5,50,0,0,0,0,0,0
+SmallestReadable=Noto Sans,8,-1,5,50,0,0,0,0,0,0
+
+[Units]
+DistanceUnit=Kilometers
+TemperatureUnit=Celsius
+TimeFormat24h=true
+DateFormatShort=yyyy-MM-dd

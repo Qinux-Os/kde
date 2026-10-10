@@ -1,0 +1,82 @@
+[General]
+# Qinux KDE Plasma defaults.
+#
+# Derived from Breeze so that upstream fixes and Qt 6 compatibility carry over.
+# The Qinux-specific values are marked; everything else is left at the Breeze
+# default deliberately, because deviating without a reason is how desktops drift
+# away from their toolkit.
+
+# --- Qinux ---------------------------------------------------------------
+
+# The LookAndFeelPackage points at the shared config package in the kde
+# repository. It is deliberately not a Global theme: the Global theme would
+# override the wallpaper and the widget style, and Qinux sets those separately
+# so that a user who changes one does not lose the other.
+LookAndFeelPackage=qinux
+
+widgetStyle=Breeze
+colorScheme=BreezeDark
+font=Noto Sans,10,-1,5,50,0,0,0,0,0,0
+fixed=Noto Sans Mono,10,-1,5,50,0,0,0,0,0,0
+menuFont=Noto Sans,10,-1,5,50,0,0,0,0,0,0
+taskbarFont=Noto Sans,10,-1,5,50,0,0,0,0,0,0
+windowTitleFont=Noto Sans,10,-1,5,50,0,0,0,0,0,0
+smallestReadableFont=Noto Sans,8,-1,5,50,0,0,0,0,0,0
+
+cursorTheme=breeze_cursors
+cursorSize=24
+
+# --- Breeze defaults, kept for reference --------------------------------
+
+singleClick=false
+showToolTips=true
+autoRaise=false
+autoRaiseInterval=5
+wheelScrollLines=3
+showMenuIcons=true
+showMenuShortcuts=true
+showShortcutKeysInTooltips=true
+askForConfirmation=false
+tooltipsDelay=800
+
+toolBarIconStyle=IconsOnly
+toolBarIconSize=Medium
+toolButtonSize=Medium
+animationDurationFactor=1.0
+enableWebEngineDebugging=false
+
+allowWheelToSwitchDesktop=true
+
+[Icons]
+Theme=breeze
+Depth=2
+Size=48
+LongPath=64
+ShortNameThreshold=4
+
+[KDE]
+# One frame longer than Breeze's default of 8. Long menus need it.
+AnimationDurationFactor=1.0
+ShowFrameRate=false
+
+[Effects]
+Enable=false
+EnableEventSounds=false
+
+[EventSounds]
+Enabled=false
+
+[OSD]
+# Shown when volume or brightness changes. Notification-only, not an overlay.
+FeedbackEnabled=false
+PopupDuration=0
+
+[Shortcuts]
+# Volume and media keys. A desktop should respond to the hardware it ships on.
+AudioVolumeIncrease=Meta+Wheel_Up
+AudioVolumeDecrease=Meta+Wheel_Down
+AudioMute=Meta+VolumeMute
+Screenshot=Print
+CopyScreenToClipboard=Shift+Print
+RecordScreen=Meta+Print
+ApplicationRecorder=Meta+Shift+Print

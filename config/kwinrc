@@ -1,0 +1,104 @@
+[Windows]
+# --- Qinux ---------------------------------------------------------------
+
+# A maximised window draws no frame. This is the single most visible cue that a
+# desktop is a tiling-adjacent design rather than a stock one, and it matches
+# what the Plasma panel defaults do.
+BorderlessMaximizedWindows=true
+
+# Tiling-friendly defaults: a window dragged to a screen edge maximises rather
+# than snapping to a grid cell, because Qinux ships no tiling script. If the
+# user installs one, it overrides these.
+ElectricBorderMaximize=true
+ElectricBorderTop=0
+ElectricBorderCornerRatio=0.25
+SnapZone=10
+
+TitlebarDoubleClick=maximize
+WindowShade=off
+Placement=Smart
+FocusPolicy=ClickToFocus
+NextFocusPrefersMouse=false
+RollOverDesktops=true
+SeparateScreenFocus=false
+
+# --- Defaults, kept for reference ---------------------------------------
+
+# Animation off by default. This is the aesthetic call in the project
+# description, and it is the one setting here that is opinionated rather than
+# practical.
+AnimationDurationFactor=0.0
+BorderColor=1
+BorderSize=1
+DWMResizeCornerEnabled=true
+FocusFollowsMouse=false
+MouseEdgeEnlargement=false
+OverlapKeepAbove=true
+ShadowEnabled=true
+ShadowSinkingEnabled=true
+ShowAnimation=false
+borderlessMaximizedWindows=true
+
+[Compositing]
+Enabled=true
+GLPlatformInterface=auto
+GLTextureFilter=1
+GLCoreProfile=false
+OpenGLIsUnsafe=false
+VSync=true
+RefreshRate=auto
+MaxFPS=120
+
+[Effect-Blur]
+enabled=true
+
+[Effect-DesktopGrid]
+enabled=false
+
+[Effect-PresentWindows]
+enabled=false
+
+[Effect-Slide]
+enabled=true
+
+[Effect-SlideBack]
+enabled=true
+
+[Effect-Dim]
+enabled=false
+
+[Effect-Highlight]
+enabled=false
+
+[Plugins]
+# Qinux ships no effects beyond the ones listed. The Breeze set is kept minimal
+# so that first boot is predictable on unknown hardware.
+enabledPlugins=blur,slide,slideback
+disabledPlugins=
+
+[TabBox]
+LayoutName=org.kde.breezedesk
+LayoutsList=org.kde.breezedesk,org.kde.breezecompact,org.kde.thumbnails
+
+[Desktops]
+Number=2
+Rows=1
+Names=One,Two
+
+[Mouse]
+X11MouseWheelFactor=1.0
+
+[X11]
+# Wayland is the session type Qinux uses. These only apply to an X11 session,
+# which exists as a fallback.
+# ForceNativeResolution=false
+# UseCompositeExtension=true
+# DisplayDepth=32
+
+[Wayland]
+# Chromium-based apps need this to behave correctly under Wayland. Leaving it
+# unset is the most common cause of a broken screen-share dialog.
+AppsPreferXDGDesktopPortal=true
+
+[ColorManaged]
+enabled=true
